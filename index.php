@@ -3,102 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link css style-->
+    <link rel="stylesheet" href="css\style.css">
+
+    <?php
+
+    require_once __DIR__ ."/Models/movie.php";
+
+    ?>
+
     <title>Class php</title>
 </head>
+
+
 <body>
 
+<h1>ELENCO FILM DISPONIBILI</h1>
 
-<?php
-
-class Movie {
-
-    public $titolo;
-    public $data_uscita;
-    public $casa_produzione;
-    public $durata;
-    public  Genere $genere;
-
-    //dichiaro il costruttore
-    public function __construct($titolo,$data_uscita,$casa_produzione,$durata,Genere $genere) {
-
-        $this->titolo = $titolo;
-        $this->data_uscita = $data_uscita;
-        $this->casa_produzione = $casa_produzione;
-        $this->durata = $durata;
-        $this->genere = $genere;
-
-    }
-
-    //funzioni set
-    public function setTitolo($titolo) {
-        $this->titolo = $titolo;
-    }
-
-    public function setDurata($durata) {
-        $this->durata = $durata;
-    }
-    //funzioni get
-    public function getTitolo() {
-        return $this->titolo;
-    }
-
-    public function getDataUscita() {
-        return $this->data_uscita;
-    }
-
-    public function getDurata() {
-        return $this->durata;
-    }
-
-}
-
-class Genere {
-    public $uno;
-    public $due;
-
-    public $tre;
-
-    //dichiaro il costruttore
-    public function __construct($uno,$due,$tre) {
-
-        $this->uno = $uno;
-        $this->due = $due;
-        $this->tre = $tre;
-
-    }
-
-}
-
-
-$gen1 = new Genere('guerra','azione','drammatico');
-
-$gen2 = new Genere('ridicolo','avventura','romantico');
-
-//istanzio il prio oggetto movie con questi valori
-$movie1 = new Movie('primo','2020-05-03','rossa','218 min',$gen1);
-
-//istanzio il prio oggetto movie con questi valori
-$movie2 = new Movie('secodno','1978-07-14','blu','145 min',$gen2);
-
-
-
-var_dump($movie1-> genere ->due);
-
-
-//eseguo varie prove
-$movie2->setDurata('32 min');
-
-var_dump($movie2->getDurata());
-
-var_dump($movie1->getTitolo());
-
-$movie1->setTitolo('poldo');
-
-var_dump($movie1->getTitolo());
-
-
-?>
-
+<h2> Titolo Primo film: <?php echo($movie1->getTitolo())?> </h2>
+<h3>Genere: <?php echo($movie1->getGenere()->uno); echo', '.($movie1->getGenere()->due); echo', '.($movie1->getGenere()->tre)?></h3>
+<h3>Data di uscita: <?php echo($movie1->getDataUscita())?></h3>
+<h3 class="red">Casa di produzione: <?php echo($movie1->getCasaProduct())?></h3>
+<h3>Durata: <?php echo($movie1->getDurata())?></h3>
+<br><br>    
+<h2> Titolo Secondo film: <?php echo($movie2->getTitolo())?> </h2>
+<h3>Genere: <?php echo($movie2->getGenere()->uno); echo', '.($movie2->getGenere()->due); echo', '.($movie2->getGenere()->tre)?></h3>
+<h3>Data di uscita: <?php echo($movie2->getDataUscita())?></h3>
+<h3 class="blu">Casa di produzione: <?php echo($movie2->getCasaProduct())?></h3>
+<h3>Durata: <?php echo($movie2->getDurata())?></h3>
+<br><br>    
+<h2> Titolo Secondo film: <?php echo($movie3->getTitolo())?> </h2>
+<h3>Genere: <?php echo($movie3->getGenere()->uno); echo', '.($movie3->getGenere()->due); echo', '.($movie3->getGenere()->tre)?></h3>
+<h3>Data di uscita: <?php echo($movie3->getDataUscita())?></h3>
+<h3 class="green">Casa di produzione: <?php echo($movie3->getCasaProduct())?></h3>
+<h3>Durata: <?php echo($movie3->getDurata())?></h3>
+<br><br>    
+<h2> Titolo Secondo film: <?php echo($movie4->getTitolo())?> </h2>
+<h3>Genere: <?php echo($movie4->getGenere()->uno); echo', '.($movie4->getGenere()->due); echo', '.($movie4->getGenere()->tre)?></h3>
+<h3>Data di uscita: <?php echo($movie4->getDataUscita())?></h3>
+<h3 class="yellow">Casa di produzione: <?php echo($movie4->getCasaProduct())?></h3>
+<h3>Durata: <?php echo($movie4->getDurata())?></h3>
 
 </body>
 </html>
