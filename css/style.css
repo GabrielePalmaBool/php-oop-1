@@ -9,6 +9,8 @@ body {
   margin: 50px;
   padding: 20px;
   text-align: center;
+  background-color: black;
+  color: white;
 }
 
 h1 {
@@ -30,4 +32,8 @@ h1 {
 
 .yellow {
   color: yellow;
+}
+
+.orange {
+  color: orange;
 }
