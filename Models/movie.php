@@ -53,14 +53,12 @@ class Movie {
         $infoGenres = "";
         
         foreach ($this -> generi as $genere) {
-
             //popolo il mio array di poggetti generi
             $infoGenres .= " - " . $genere -> name;
-
         }
-        
+      
         //restituisco l'array di oggetti
-        return $this ->$infoGenres;
+        return $infoGenres;
        
     }
 
