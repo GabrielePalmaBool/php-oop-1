@@ -22,17 +22,21 @@
 <body>
 
 <h1>ELENCO FILM DISPONIBILI</h1>
-<?php 
-    foreach ($movies as $movie){
-?>
-<h2> Titolo Primo film: <?php echo($movie->getTitolo())?> </h2>
-<h3>Genere: <?php echo($movie->getGenere());?></h3>
-<h3>Data di uscita: <?php echo($movie->getDataUscita())?></h3>
-<h3 class="<?php echo($movie->getCasaProduct()) ?>">Casa di produzione: <?php echo($movie->getCasaProduct())?></h3>
-<h3>Durata: <?php echo($movie->getDurata())?></h3>
-<br><br>    
-<?php   
-}
-?>
+
+    <?php 
+        foreach ($movies as $movie){
+    ?>
+
+    <h2> Titolo Primo film: <?php echo($movie->getTitolo())?> </h2>
+    <h3>Genere: <?php echo($movie->getGenere());?></h3>
+    <h3>Data di uscita: <?php echo($movie->getDataUscita())?></h3>
+    <h3 class="<?php echo($movie->getCasaProduct()) ?>">Casa di produzione: <?php echo($movie->getCasaProduct())?></h3>
+    <h3>Durata: <?php echo($movie->getDurata())?></h3>
+    <br><br> 
+
+    <?php   
+    }
+    ?>
+
 </body>
 </html>
