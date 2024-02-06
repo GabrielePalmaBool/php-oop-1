@@ -1,25 +1,15 @@
 <?php
 
 class Genere {
-    public $uno;
-    public $due;
-    public $tre;
+    public $name;
 
     //dichiaro il costruttore
-    public function __construct($uno,$due,$tre) {
+    public function __construct($name) {
 
-        $this->uno = $uno;
-        $this->due = $due;
-        $this->tre = $tre;
-
+        $this->name = $name;
+      
     }
 
 }
-
-$gen1 = new Genere('guerra','azione','drammatico');
-
-$gen2 = new Genere('ridicolo','avventura','romantico');
-
-$gen3 = new Genere('fantastico','fantascienza','horror');
 
 ?>
